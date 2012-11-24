@@ -1,0 +1,15 @@
+\begin{tikzpicture}[remember picture, overlay]
+
+\node at (current page.south west) {
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[style=normal lines,step=0.1in] (0,0) grid +(210mm,297mm);
+  \draw[style=margin lines,step=0.5in] (0,0) grid +(210mm,297mm);
+  \draw[style=strong lines,step=1in] (0,0) grid +(210mm,297mm);
+    
+  \foreach \x in {0,...,9} {
+    \foreach \y in {0,...,11}
+      \draw[color=med-light-gray] (\x in, \y in) node[below left] {$(\x,\y)$};
+  }
+  \end{tikzpicture}
+};
+\end{tikzpicture}

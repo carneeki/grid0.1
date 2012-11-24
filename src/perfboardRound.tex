@@ -1,0 +1,19 @@
+\begin{tikzpicture}[remember picture, overlay]
+\node at (current page.south west) {
+\begin{tikzpicture}[remember picture, overlay,
+  x=0.1in,y=0.1in,
+  perfpad/.style={draw=white,circle,minimum size=2.25mm,
+                  inner sep=0pt,outer sep=0pt,fill=light-gray},
+  pthhole/.style={draw=white,circle,minimum size=0.5mm,
+                  inner sep=0pt,outer sep=0pt,fill=white}
+]
+\draw[style=normal lines,step=0.1in] (0,0) grid +(210mm,297mm);   
+\foreach \x in {2,...,80} {
+  \foreach \y in {2,...,110} {
+    \node[perfpad] at (\x,\y) {};
+    \node[pthhole] at (\x,\y) {};
+  }
+}
+\end{tikzpicture}
+};
+\end{tikzpicture}
