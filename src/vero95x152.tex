@@ -1,0 +1,23 @@
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[remember picture,
+  x=0.1in,y=0.1in,
+  veropad/.style={draw=white,fill=light-gray},
+  pthhole/.style={draw=white,circle,minimum size=0.5mm,
+                  inner sep=0pt,outer sep=0pt,fill=white}
+]
+\draw[style=normal lines,step=0.1in] (0,0) grid +(39,66);
+\draw[veropad]  (1.2,3) +(-0.02in,0) rectangle +(0.02in,60);
+\draw[veropad] (37.8,3) +(-0.02in,0) rectangle +(0.02in,60);
+\draw[veropad]    (2,3) +(-1mm,0) rectangle +(1mm,60);
+\draw[veropad]   (37,3) +(-1mm,0) rectangle +(1mm,60);
+\foreach \x in {3,...,36} {
+    \draw[veropad] (\x,3) +(-1mm,0) rectangle +(1mm,60);
+  \foreach \y in {3,...,63} {
+    \node[pthhole] at (\x,\y) {};
+  }
+}
+\end{tikzpicture}
+\caption{Vero style stripboard, 95mm x 152mm}
+\label{fig:vero95x152}
+\end{figure}
